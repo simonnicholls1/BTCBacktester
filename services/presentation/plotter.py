@@ -20,8 +20,22 @@ class Plotter:
         signal['signal_diff'] = signal['signal'].diff()
 
         plt.ylabel('Price', fontsize=15)
-        plt.xlabel('Date', fontsize=15)
+        plt.xlabel('Time', fontsize=15)
         plt.title('BTC-USDT EWMA Crossover Strategy', fontsize=20)
+        plt.legend()
+        plt.grid()
+        plt.show()
+
+    def plot_portfolio(self, portfolio_results):
+        plt.figure(figsize=(20, 10))
+
+        # plot close price, short-term and long-term moving averages
+        portfolio_results['portfolio_value'].plot(color='k', label='Port Value')
+
+
+        plt.ylabel('Portfolio Value', fontsize=15)
+        plt.xlabel('Time', fontsize=15)
+        plt.title('Strategy Portfolio Value Through Time', fontsize=20)
         plt.legend()
         plt.grid()
         plt.show()

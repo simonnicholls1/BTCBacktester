@@ -56,6 +56,4 @@ class Backtester:
             self.portfolio.portfolio.loc[curr_date] = holdings
             curr_holdings = self.portfolio.portfolio.loc[curr_date]
 
-        self.portfolio.portfolio['cumulative_returns'] = (1 + self.portfolio.portfolio['return']).cumprod() - 1
-
         return self.portfolio.portfolio
