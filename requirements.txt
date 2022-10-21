@@ -1,0 +1,5 @@
+pandas
+numpy
+ccxt
+pandas_ta
+matplotlib
